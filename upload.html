@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload Students</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Upload Excel File</h2>
+  <input type="file" id="file">
+  <button onclick="upload()">Upload</button>
+</div>
+
+<script>
+async function upload() {
+  const formData = new FormData();
+  formData.append("file", file.files[0]);
+
+  const res = await fetch("http://localhost:5000/api/students/upload", {
+    method: "POST",
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("token")
+    },
+    body: formData
+  });
+
+  if (res.ok) alert("Upload successful");
+  else alert("Upload failed");
+}
+</script>
+
+</body>
+</html>

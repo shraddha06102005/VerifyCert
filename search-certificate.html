@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Certificate</title>
+</head>
+<body>
+
+<h2>Search Certificate</h2>
+
+<input id="certificateId" placeholder="Enter Certificate ID">
+<button onclick="searchCertificate()">Search</button>
+
+<hr>
+
+<div id="result" style="display:none;">
+  <h3>Certificate Details</h3>
+
+  <p><b>Name:</b> <span id="name"></span></p>
+  <p><b>Course:</b> <span id="course"></span></p>
+  <p><b>Student ID:</b> <span id="sid"></span></p>
+  <p><b>Certificate ID:</b> <span id="cid"></span></p>
+  <p><b>Issued On:</b> <span id="date"></span></p>
+</div>
+
+<!-- 🔴 SCRIPT MUST BE AT BOTTOM -->
+<script src="js/search.js"></script>
+
+</body>
+</html>

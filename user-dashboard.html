@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Dashboard – Certificate System</title>
+
+  <!-- Certificate CSS -->
+  <link rel="stylesheet" href="css/certificate.css">
+
+  
+</head>
+<body>
+
+  <input type="text" id="studentId" placeholder="Enter Student ID">
+<button onclick="generateCertificate()">Generate</button>
+
+<div id="certificate" class="certificate" style="display:none;">
+
+  <div class="cert-border">
+
+    <img src="assets/logo.png" class="logo" alt="Institute Logo">
+
+    <h1 class="title">Certificate of Completion</h1>
+
+    <p class="subtitle">This is proudly presented to</p>
+
+    <h2 id="name" class="student-name">Student Name</h2>
+
+    <p class="text">
+      for successfully completing the course
+    </p>
+
+    <h3 id="course" class="course-name">Course Name</h3>
+
+    <div class="info">
+      <p><strong>Student ID:</strong> <span id="sid"></span></p>
+      <p><strong>Certificate ID:</strong> <span id="cid"></span></p>
+      <p><strong>Date:</strong> <span id="date"></span></p>
+    </div>
+
+    <div class="footer">
+      <div>
+        <p class="sign-line"></p>
+        <p>Authorized Signature</p>
+      </div>
+
+      <div class="seal">
+        VERIFIED
+      </div>
+    </div>
+
+  </div>
+
+  <button onclick="downloadPDF()" class="download-btn">
+    Download Certificate (PDF)
+  </button>
+
+</div>
+
+  <!-- PDF LIBRARY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="js/user.js"></script>
+
+</body>
+</html>
